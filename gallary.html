@@ -35,7 +35,6 @@
             flex-wrap: wrap;
             gap: 15px;
             justify-content: center;
-            /* Center the items */
         }
 
         .media-item {
@@ -45,9 +44,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s;
             width: calc(33.333% - 10px);
-            /* 3 items per row */
             max-width: 300px;
-            /* Max width for better presentation */
         }
 
         .media-item:hover {
@@ -55,12 +52,10 @@
         }
 
         img,
-        video {
+        iframe {
             width: 100%;
             height: 200px;
-            /* Fixed height for uniformity */
             object-fit: cover;
-            /* Ensures media fit their container */
             display: block;
         }
 
@@ -81,67 +76,87 @@
         <h1>Media Gallery</h1>
     </header>
     <main>
-        <div id="gallery" class="gallery"></div>
+        <div class="gallery">
+            <!-- YouTube Links -->
+            <div class="media-item">
+                <iframe src="https://www.youtube.com/embed/Q9fE964Yp5E" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-item">
+                <iframe src="https://www.youtube.com/embed/_CiZm7_xV84" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="media-item">
+                <iframe src="https://www.youtube.com/embed/VZ5Hnr2V_VQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Image Links -->
+            <div class="media-item">
+                <img src="https://i.postimg.cc/MGwv1kp7/1670674869282.jpg" alt="Image 1">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/q7ZqSNGL/1670674869295.jpg" alt="Image 2">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/pTFWSqrW/1670674869310.jpg" alt="Image 3">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/Hs4xHZ2j/1670674869346.jpg" alt="Image 4">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/JzxG36DS/1670674869358.jpg" alt="Image 5">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/QMS1tNJ9/1670674869397.jpg" alt="Image 6">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/B66D1Wmh/1670674869408.jpg" alt="Image 7">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/7hjgkBMK/1670674869422.jpg" alt="Image 8">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/zfqT8HKY/1670674869443.jpg" alt="Image 9">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/d3C9LP0b/1670674869459.jpg" alt="Image 10">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/Cxgcn1km/1670674869474.jpg" alt="Image 11">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/9X9PP2WS/1670674869489.jpg" alt="Image 12">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/1XDpyGCP/1670674869518.jpg" alt="Image 13">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/hv0fCpZJ/1670674869548.jpg" alt="Image 14">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/rptz68Y2/1670674869565.jpg" alt="Image 15">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/sD62vBkR/1670674869595.jpg" alt="Image 16">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/VkvdR9q6/1670674869649.jpg" alt="Image 17">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/fybNNCTS/1670674869674.jpg" alt="Image 18">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/pVkW6hXn/1670674869690.jpg" alt="Image 19">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/3wZVxGqX/IMG-20221210-181341.jpg" alt="Image 20">
+            </div>
+            <div class="media-item">
+                <img src="https://i.postimg.cc/JzNdpJMf/IMG-20221210-181343.jpg" alt="Image 21">
+            </div>
+        </div>
     </main>
     <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 DPSNASHIK.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.getElementById('gallery');
-            const mediaFiles = [
-                'p/20221210_164939.png',
-                'p/20221210_193709.jpg',
-                'p/1670733521688.jpg',
-                'p/1670733521723.jpg',
-                'p/1670733521863.jpg',
-                'p/1670733521933.jpg',
-                'p/1670733521944.jpg',
-                'p/1670733522403.jpg',
-                'p/1670733522466.jpg',
-                'p/1670733522472.jpg',
-                'p/1670733522780.jpg',
-                'p/DSCN2168.JPG',
-                'p/IMG_1589.JPG',
-                'p/IMG_20221210_170848.jpg',
-                'p/IMG-20221210-WA0004.jpg',
-                
-                'p/e/VID_99541026_022352_259.mp4',
-                'p/e/VID_99560718_105733_801.mp4',
-                'p/e/VID_99590113_055303_198.mp4',
-                'p/e/VID_99660625_095304_566.mp4',
-                'p/e/VID_99701212_203025_554.mp4',
-                'p/e/VID_99760929_141120_224.mp4',
-                'p/e/VID_100580714_162105_853.mp4',
-                'p/e/VID_101200521_212818_650.mp4',
-                'p/e/VID-20221212-WA0002.mp4'
-            ];
-
-            mediaFiles.forEach(file => {
-                const mediaItem = document.createElement('div');
-                mediaItem.classList.add('media-item');
-
-                const fileName = file.split('/').pop();
-                const altText = fileName.replace(/\.\w+$/, '');
-
-                if (file.endsWith('.mp4') || file.endsWith('.webm')) {
-                    const video = document.createElement('video');
-                    video.src = file;
-                    video.controls = true;
-                    video.alt = altText; // Accessibility
-                    mediaItem.appendChild(video);
-                } else {
-                    const img = document.createElement('img');
-                    img.src = file;
-                    img.alt = altText; // Add alt text
-                    img.loading = 'lazy';
-                    mediaItem.appendChild(img);
-                }
-
-                gallery.appendChild(mediaItem);
-            });
-        });
-    </script>
 </body>
 
 </html>
