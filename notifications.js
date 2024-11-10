@@ -4,25 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
   if ('Notification' in window) {
     Notification.requestPermission().then(permission => {
       if (permission === 'granted') {
-        // Check if it’s the first time, or if 2 days have passed
-        scheduleNotification(true); // `true` indicates initial load
+        // Check if it's the first time or if 2 days have passed
+        scheduleNotification();
       }
     });
   }
 });
 
-function scheduleNotification(isInitialLoad = false) {
+function scheduleNotification() {
   const lastNotificationTime = localStorage.getItem('lastNotificationTime');
   const currentTime = Date.now();
   const twoDaysInMilliseconds = 2 * 24 * 60 * 60 * 1000; // 2 days
 
-  // Check if 2 days have passed or if this is the first notification
-  if (isInitialLoad && !lastNotificationTime) {
-    // First-time notification
+  // If no notification has ever been sent, send one immediately
+  if (!lastNotificationTime) {
     sendNotification('Event Reminder', 'The event is near, be prepared!');
     localStorage.setItem('lastNotificationTime', currentTime);
-  } else if (!lastNotificationTime || currentTime - lastNotificationTime > twoDaysInMilliseconds) {
-    // Scheduled notification (every 2 days)
+  } 
+  // If 2 days have passed since the last notification, send one
+  else if (currentTime - lastNotificationTime > twoDaysInMilliseconds) {
     sendNotification('Event Reminder', 'The event is near, be prepared!');
     localStorage.setItem('lastNotificationTime', currentTime);
   }
@@ -31,6 +31,6 @@ function scheduleNotification(isInitialLoad = false) {
 function sendNotification(title, body) {
   new Notification(title, {
     body: body,
-    icon: 'icon.png' // Optional icon
+    icon: 'icon.png' // Optional icon for the notification
   });
 }
