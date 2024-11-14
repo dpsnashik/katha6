@@ -5992,3 +5992,61 @@ h6 {
 .blog_area.section-padding {
     font-size: 12px; /* Adjust to your preferred size */
 }
+/* Main section - default font size */
+.blog_area.section-padding {
+    font-size: 12px;
+}
+
+/* Capitalize first letter of each word in all headings (h1 to h5) */
+.blog_area.section-padding h1,
+.blog_area.section-padding h2,
+.blog_area.section-padding h3,
+.blog_area.section-padding h4,
+.blog_area.section-padding h5 {
+    text-transform: capitalize;
+}
+
+/* Customize font sizes for each heading level */
+.blog_area.section-padding h1 {
+    font-size: 24px; /* Adjust h1 font size */
+}
+
+.blog_area.section-padding h2 {
+    font-size: 22px; /* Adjust h2 font size */
+}
+
+.blog_area.section-padding h3 {
+    font-size: 18px; /* Adjust h3 font size */
+}
+
+.blog_area.section-padding h4 {
+    font-size: 16px; /* Adjust h4 font size */
+}
+
+.blog_area.section-padding h5 {
+    font-size: 14px; /* Adjust h5 font size */
+}
+
+/* Additional uppercase styling for specific elements */
+.blog_area.section-padding h3 {
+    text-transform: uppercase; /* Capitalizes all h3 titles */
+}
+
+.blog_area.section-padding .blog_item_date h3,
+.blog_area.section-padding .blog_details h3,
+.blog_area.section-padding .buy-now-button {
+    text-transform: uppercase; /* Applies uppercase to these elements */
+}
+
+/* Additional styles for specific elements */
+.blog_area.section-padding .blog_item_date h3 {
+    font-size: 16px; /* Adjust date heading size */
+}
+
+.blog_area.section-padding .buy-now-button {
+    font-size: 14px; /* Adjust "On the spot" button text size */
+}
+
+.blog-info-link {
+    font-size: 12px; /* Adjust font size in the info link section */
+}
